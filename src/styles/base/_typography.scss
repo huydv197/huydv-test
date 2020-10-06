@@ -1,0 +1,126 @@
+html {
+    font-size: 50%;
+    font-family: $font-base;
+  
+    @include media(">=lg") {
+      font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+    }
+}
+
+body {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $color-text;
+}
+
+h1, .h1 {
+    font-size: map-get($text-size, 'heading-1');
+}
+h2, .h2 {
+    font-size: map-get($text-size, 'heading-2');
+}
+h3, .h3 {
+    font-size: map-get($text-size, 'heading-3');
+}
+h4, .h4 {
+    font-size: map-get($text-size, 'heading-4');
+}
+h5, .h5 {
+    font-size: map-get($text-size, 'heading-5');
+}
+h6, .h6 {
+    font-size: map-get($text-size, 'heading-6');
+}
+
+// Text size
+@each $name, $font-size in $text-size {
+    .#{$name} {
+        font-size: $font-size !important;
+    }
+}
+
+// Text case
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+// Align
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+// Font weight
+.font-weight-light {
+    font-weight: 300;
+}
+
+.font-weight-normal {
+    font-weight: 400 !important;
+}
+
+.font-weight-medium {
+    font-weight: 500 !important;
+}
+
+.font-weight-semi-bold {
+    font-weight: 600 !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.font-italic {
+    font-style: italic !important;
+}
+
+.vertical-middle {
+    vertical-align: middle !important;
+}
+
+
+//Wrap text
+.nowrap {
+    white-space: nowrap;
+}
+
+//break-out text
+.dont-break-out {
+    
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+    
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    
+}
+
+// Utils text
+.link-readmore {
+    text-decoration: none;
+    display: inline-flex;
+    align-self: flex-end;
+    align-items: center;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

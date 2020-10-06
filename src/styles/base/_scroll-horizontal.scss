@@ -1,0 +1,40 @@
+$colMax: map-deep-get($grid, 'columns', 'max');
+
+.scroll-wrapper {
+    @include scrollbars(6px, #D1D3D4, #F1F2F2, $border-radius: 6px);
+    padding-bottom: 3rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    // @include media(">=1200px") {
+    //     overflow-x: hidden;
+
+    //     &:hover {
+    //         overflow-x: auto;
+    //     }
+    // }
+}
+
+// Make column
+@each $key, $val in map-get($grid, 'breakpoints') {
+    @if ($key == 'default') {
+        @for $i from 1 through $colMax {
+            .scroll-col-#{$i} {
+                $baseWidth: (100 * $i) / $colMax;
+                max-width: ((100 - $baseWidth/2) * $i) / $colMax * 1%;
+                flex: 0 0 ((100 - $baseWidth/2) * $i) / $colMax * 1%;
+            }
+        }
+
+    } @else {
+        @media (min-width: $val * 1px) {
+            @for $i from 1 through $colMax {
+                .scroll-col-#{$key}-#{$i} {
+                    $baseWidth: (100 * $i) / $colMax;
+                    max-width: ((100 - $baseWidth/2) * $i) / $colMax * 1%;
+                    flex: 0 0 ((100 - $baseWidth/2) * $i) / $colMax * 1%;
+                }
+            }
+        }
+    }
+}

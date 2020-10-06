@@ -1,0 +1,166 @@
+// Named Colors
+$color-green: #37A000 !default;
+$color-red: #D50000 !default;
+$color-blue: #14bff4 !default;
+$color-yellow: #F1A31E !default;
+$color-orange: #F2994A !default;
+$color-pink: #EF72C4 !default;
+$color-purple: #A671FE !default;
+$color-dark: #333333 !default;
+$color-gray: #999999 !default;
+
+// Theme Colors
+$color-primary: $color-green !default;
+$color-brand: $color-yellow !default;
+$color-secondary: $color-purple !default;
+$color-info: $color-blue !default;
+$color-success: $color-green !default;
+$color-error: $color-red !default;
+$color-warning: $color-yellow !default;
+
+// Text Colors
+$color-text: #656565 !default;
+$color-text-sub: #e0e0e0 !default;
+$color-text-light: #f2f2f2 !default;
+$color-text-dark: #222222 !default;
+$color-text-gray: #666666 !default;
+$color-text-white: #fff !default;
+
+// Other Colors
+$color-image-placeholder: #f6f6f6 !default;
+$color-border: #F2F2F2 !default;
+$color-active: $color-red !default;
+$color-disabled: #E0E0E0 !default;
+$color-icon: rgba(0, 0, 0, 0.54);
+
+
+// Common box-shadow
+$shadow-1: 0px 0px 5px rgba(0, 0, 0, 0.05);
+$shadow-hover: 0px 3px 5px rgba(0, 0, 0, 0.2);
+$shadow-input: 0px 0px 5px rgba(0, 0, 0, 0.05), inset 0px 0px 8px rgba(0, 0, 0, 0.3);
+
+// Fonts
+$font-base: "Helvetica Neue", sans-serif !default;
+$font-size-base: 1.4rem !default;
+$font-size-caption: 1.2rem !default;
+$line-height-base: (18/14) !default;
+
+
+// Map define for render util classes
+$colors: (
+    primary: $color-primary,
+    secondary: $color-purple,
+    info: $color-info,
+    success: $color-success,
+    error: $color-error,
+    warning: $color-warning,
+    disabled: $color-disabled
+) !default;
+
+$text-colors: (
+    primary: $color-primary,
+    secondary: $color-secondary,
+    info: $color-info,
+    success: $color-green,
+    error: $color-error,
+    warning: $color-warning,
+    base: $color-text,
+    sub: $color-text-sub,
+    gray: $color-text-gray,
+    white: #fff,
+    black: #000,
+    dark: $color-text-dark,
+    active: $color-active,
+    disabled: $color-disabled,
+    orange: $color-orange
+) !default;
+
+$bg-colors: (
+    transparent: #0000,
+    primary: $color-primary,
+    secondary: $color-secondary,
+    info: $color-info,
+    success: $color-success,
+    error: $color-error,
+    warning: $color-warning,
+    gray: #FBFCFE,
+    input-gray: #FBFBFB,
+    white: #fff,
+    black: #000,
+    light: $color-text-light,
+) !default;
+
+// Typo
+$text-size: (
+    heading-1: 3.2rem,
+    heading-2: 2.8rem,
+    heading-3: 2.4rem,
+    heading-4: 1.8rem,
+    heading-5: 1.5rem,
+    heading-6: 1.4rem,
+    subheading: 1.8rem,
+    title: 1.6rem,
+    caption: $font-size-caption
+) !default;
+
+// 
+$border-radius-common: 2px !default;
+
+
+// use in include-media mixin
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+) !default;
+
+// Grid options - to make grid
+$grid: (
+    container: (
+        gap: 12,
+        responsive: (
+            sm: 534,
+            md: 714,
+            lg: 954,
+            xl: 1164
+        )
+    ),
+    columns: (
+        max: 12,
+        gap: 24
+    ),
+    breakpoints: (
+        default: 0,
+        sm: 576,
+        md: 768,
+        lg: 992,
+        xl: 1200
+    )
+) !default;
+
+$spacer: 1rem !default;
+$spacers: (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 2),
+    5: ($spacer * 3),
+    6: ($spacer * 4),
+    auto: auto
+) !default;
+
+$xy-border: (
+    top: t,
+    right: r,
+    bottom: b,
+    left: l,
+) !default;
+
+$z-index: (
+    modal: 1000,
+    header: 999,
+    sidebar: 999,
+    dropdown: 9
+) !default;

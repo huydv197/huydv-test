@@ -1,0 +1,89 @@
+.app-spin {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+    text-align: center;
+}
+
+.app-spin__dots {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    width: 1em;
+    height: 1em;
+    transform: rotate(45deg);
+    animation: SpinRotate 1.2s infinite linear;
+
+    i {
+        position: absolute;
+        display: block;
+        width: 9px;
+        height: 9px;
+        background-color: $color-primary;
+        border-radius: 100%;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        opacity: 0.3;
+        animation: SpinMove 1s infinite linear alternate;
+
+        &:nth-child(1) {
+            top: 0;
+            left: 0;
+        }
+        &:nth-child(2) {
+            top: 0;
+            right: 0;
+            animation-delay: .4s;
+        }
+        &:nth-child(3) {
+            right: 0;
+            bottom: 0;
+            animation-delay: .8s;
+        }
+        &:nth-child(4) {
+            bottom: 0;
+            left: 0;
+            animation-delay: 1.2s;
+        }
+    }
+}
+
+.app-spin__text {
+    color: $color-primary;
+}
+
+// MODIFIERS
+.app-spin--white {
+    .app-spin__dots i {
+        background-color: #fff;
+    }
+
+    .app-spin__text {
+        color: #fff;
+    }
+}
+
+.app-spin--small {
+    .app-spin__dots {
+        font-size: 14px;
+
+        i {
+            width: 6px;
+            height: 6px;
+        }
+    }
+}
+
+
+
+// KEYFRAMES
+@keyframes SpinRotate {
+    to {
+        transform: rotate(405deg);
+    }
+}
+
+@keyframes SpinMove {
+    to {
+        opacity: 1;
+    }
+}

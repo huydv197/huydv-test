@@ -1,0 +1,7 @@
+export const APP_INPUT_VALIDATE_STATUS = {
+  DEFAULT: 0,
+  SUCCESS: 1,
+  ERROR: 2,
+  WARNING: 3
+}
+ 

@@ -1,0 +1,43 @@
+.multiselect {
+    min-height: 32px;
+    &__select {
+        width: 30px;
+        height: 30px;
+        line-height: 22px;
+
+        &::before {
+            color: #37A000;
+            border-color: #37A000 transparent transparent;
+        }
+    }
+
+    &__tags {
+        height: 32px;
+        min-height: 32px;
+        padding: 5px 30px 0 8px;
+        font-size: 1.4rem;
+        text-transform: none;
+
+        .multiselect__single {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__content-wrapper {
+        position: relative;
+
+        .multiselect__element {
+            min-height: 32px;
+
+            .multiselect__option {
+                min-height: 32px;
+                padding: 0 12px;
+                line-height: 30px;
+
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}

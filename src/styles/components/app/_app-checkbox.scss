@@ -1,0 +1,51 @@
+.app-checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.app-checkbox__checkmark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    flex: 0 0 2.4rem;
+    font-size: 2.4rem;
+}
+
+.app-checkbox__text {
+    margin-left: .5rem;
+    line-height: (18/14);
+}
+
+.app-checkbox__icon--checked {
+    display: none;
+}
+
+.app-checkbox__icon--unchecked {
+    display: block;
+}
+
+.app-checkbox__input {
+    &:checked {
+        + .app-checkbox__checkmark {
+            .app-checkbox__icon--checked {
+                display: block;
+            }
+            
+            .app-checkbox__icon--unchecked {
+                display: none;
+            }
+            // + .app-checkbox__text {
+            //     color: $color-primary;
+            // }
+        }
+    }
+
+    &:disabled {
+        + .app-checkbox__checkmark {
+            color: $color-disabled;
+        }
+    }
+}
